@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Advice generator app</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Script -->
+    <script src="./script.js" defer></script>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="py-14 bg-drk_blue min-h-dvh flex items-center justify-center relative text-lite_cyan"
+  >
+    <main
+      class="w-11/12 min-w-[17.5rem] max-w-[40rem] px-8 py-12 mb-8 rounded-xl bg-drk_gray_blue shadow-xl relative flex flex-col gap-8 items-center"
+    >
+      <h1 class="text-neon_green uppercase tracking-[.3em] font-medium text-sm">
+        Advice #<span id="number"></span>
+      </h1>
+      <section class="relative pb-10 mb-4 border-b border-grayish_blue">
+        <blockquote
+          cite="https://api.adviceslip.com"
+          class="text-center md:text-quote text-[1.45rem] font-semibold"
+        >
+          <q id="quote"></q>
+        </blockquote>
+        <button
+          id="pause-play"
+          class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 p-3 bg-drk_gray_blue grid place-items-center text-2xl appearance-none"
+        >
+          <ion-icon name="pause"></ion-icon>
+        </button>
+      </section>
+      <!-- get random -->
+      <button
+        id="random"
+        class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 size-14 rounded-full bg-neon_green grid place-items-center appearance-none transition-all duration-200 hover:shadow-2xl hover:shadow-neon_green/80"
+      >
+        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M20 0H4a4.005 4.005 0 0 0-4 4v16a4.005 4.005 0 0 0 4 4h16a4.005 4.005 0 0 0 4-4V4a4.005 4.005 0 0 0-4-4ZM7.5 18a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z"
+            fill="#202733"
+          />
+        </svg>
+      </button>
+    </main>
+
+    <div
+      class="absolute left-1/2 -translate-x-1/2 bottom-1 text-center text-xs [&>a]:text-[hsl(228,70%,65%)]"
+    >
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Benedict Jr</a>.
+    </div>
+
+    <!-- IonIcon script -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
