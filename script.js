@@ -15,6 +15,9 @@ tailwind.config = {
       fontSize: {
         quote: "1.75rem",
       },
+      animation: {
+        "spin-slow": "spin 1s linear",
+      },
     },
   },
 };
@@ -32,8 +35,8 @@ const url = "https://api.adviceslip.com/advice";
 // fetch data
 const fetchQuote = async () => {
   const res = await fetch(url);
-  const data = await res.json();
-  return data;
+  const dataRes = await res.json();
+  return dataRes;
 };
 
 const renderAdvice = (obj) => {
